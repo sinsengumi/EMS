@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/*--------------------------------------
+    リセット
+---------------------------------------*/
+* {
+    font-family: 'メイリオ', Meiryo, Verdana, Helvetica, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.75em;
+    list-style: none;
+}
+
+html {
+    height: 100%;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+input[type="submit"],
+input[type="button"] {
+    padding: 2px 4px;
+}
+
+select {
+    padding: 2px;
+}

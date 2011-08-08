@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="EMS" basedir="." default="build">
+
+	<property name="target" value="1.6" />
+	<property name="source" value="1.6" />
+	<property name="doctitle" value="EMS API 仕様" />
+	<property name="classes" value="build/classes" />
+	<property name="apt_generated" value="build/apt_generated" />
+
+	<path id="classpath.compile">
+		<fileset dir="lib/compile">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath.weblib">
+		<fileset dir="WebContent/WEB-INF/lib">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+
+	<path id="classpath">
+		<pathelement location="build/classes" />
+		<path refid="classpath.compile" />
+		<path refid="classpath.weblib" />
+	</path>
+
+	<target name="clean">
+		<delete dir="${classes}" />
+		<delete dir="${apt_generated}" />
+	</target>
+
+	<target name="init" depends="clean">
+		<mkdir dir="${classes}" />
+		<mkdir dir="${apt_generated}" />
+		<copy includeemptydirs="false" todir="${classes}">
+			<fileset dir="src">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="build" depends="init">
+		<javac debug="true" destdir="${classes}" source="${source}" target="${target}">
+			<src path="src" />
+			<classpath refid="classpath" />
+			<compilerarg line="-s ${apt_generated}" />
+		</javac>
+	</target>
+
+	<target name="war" depends="build">
+		<war destfile="${ant.project.name}.war" webxml="WebContent/WEB-INF/web.xml">
+			<fileset dir="WebContent">
+				<include name="**/*" />
+				<exclude name="**/META-INF/**" />
+				<exclude name="**/WEB-INF/**" />
+			</fileset>
+			<classes dir="${classes}" />
+			<webinf dir="WebContent/WEB-INF">
+				<exclude name="**/web.xml" />
+			</webinf>
+		</war>
+	</target>
+
+	<target name="javadoc">
+		<delete dir="doc" />
+
+		<javadoc
+			windowtitle="${doctitle}" destdir="doc" source="${source}"
+			access="public" author="true" version="true" use="true"
+			nodeprecated="false" nodeprecatedlist="false" noindex="false"
+			nonavbar="false" notree="false" splitindex="true"
+			sourcepath="src" encoding="UTF-8" docencoding="UTF-8" charset="UTF-8">
+
+			<doctitle>${doctitle}</doctitle>
+			<sourcepath path="src" />
+			<package name="org.sample.ems.*" />
+			<classpath refid="classpath" />
+			<link href="http://java.sun.com/javase/ja/6/docs/ja/api/" />
+		</javadoc>
+	</target>
+</project>

@@ -1,0 +1,6 @@
+h1. EMS [Employee Management System]
+
+会社の新人教育用に作ったWebアプリケーションです。
+練習のために、Servlet 3.0, Doma などを使った。
+
+h2. インストール
