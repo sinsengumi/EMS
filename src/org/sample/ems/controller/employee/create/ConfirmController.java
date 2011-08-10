@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.sample.ems.entity.Employee;
 import org.sample.ems.entity.EmployeeValidator;
 import org.sample.ems.helper.ServletHelper;
@@ -159,7 +160,7 @@ public class ConfirmController extends HttpServlet {
 
         Employee result = new Employee();
         result.setEmployeeId(request.getParameter("employeeId"));
-        result.setPassword(request.getParameter("password"));
+        result.setPassword(DigestUtils.sha256Hex(request.getParameter("password")));
         result.setKanjiLastName(request.getParameter("kanjiLastName"));
         result.setKanjiFirstName(request.getParameter("kanjiFirstName"));
         result.setSex(request.getParameter("sex"));

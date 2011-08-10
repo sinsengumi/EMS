@@ -28,10 +28,6 @@
         <td colspan="4">${fn:escapeXml(sessionScope.createEmployee.employeeId)}</td>
     </tr>
     <tr>
-        <th>パスワード ※</th>
-        <td colspan="4">${eFn:maskPassword(sessionScope.createEmployee.password)}</td>
-    </tr>
-    <tr>
         <th>名前（漢字） ※</th>
         <th>姓</th>
         <td>${fn:escapeXml(sessionScope.createEmployee.kanjiLastName)}</td>

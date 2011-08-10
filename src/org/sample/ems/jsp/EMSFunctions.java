@@ -18,16 +18,6 @@ public final class EMSFunctions {
     }
 
     /**
-     * パスワードをマスク（各文字を「*（アスタリスク）」に変換）します。
-     *
-     * @param password パスワード
-     * @return マスクされたパスワード
-     */
-    public static String maskPassword(String password) {
-        return password.replaceAll(".", "*");
-    }
-
-    /**
      * HTMLのラジオボタンを生成します。
      *
      * @param name name属性
