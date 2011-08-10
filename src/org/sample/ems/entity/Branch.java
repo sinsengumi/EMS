@@ -1,7 +1,7 @@
 package org.sample.ems.entity;
 
 /**
- * 部門コードを表す列挙型です。
+ * 部門を表す列挙型です。
  *
  * @author Tomoya Yoshida
  * @version $Revision$
