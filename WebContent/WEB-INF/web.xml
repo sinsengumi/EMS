@@ -19,6 +19,7 @@
         <location>/WEB-INF/jsp/error/404.jsp</location>
     </error-page>
 
+    <!-- Filterの順番をアノテーションで指定できないため、web.xmlに記述 -->
     <filter>
         <filter-name>EncodingFilter</filter-name>
         <filter-class>org.sample.ems.filter.EncodingFilter</filter-class>
