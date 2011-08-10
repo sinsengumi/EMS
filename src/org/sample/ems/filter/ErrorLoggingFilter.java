@@ -9,8 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import org.sample.ems.exception.EMSException;
-
 /**
  * エラーログ出力を行うフィルタークラスです。<br>
  * 指定されたURLパターンのリクエスト処理中に、例外がスローされた場合に、その例外を捕捉し、エラーログを出力し、再スローします。<br>
@@ -34,9 +32,6 @@ public class ErrorLoggingFilter implements Filter {
 
         try {
             chain.doFilter(request, response);
-        } catch (EMSException e) {
-            System.out.println(e.getMessage());
-            throw e;
         } catch (IOException e) {
             System.out.println(e.getMessage());
             throw e;
