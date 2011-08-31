@@ -4,3 +4,5 @@ h1. EMS [Employee Management System]
 練習のために、Servlet 3.0, Doma などを使った。
 
 h2. インストール
+
+アプリケーションサーバにTomcatを使用する場合は、server.xmlのConnector要素にuseBodyEncodingForURI属性を付与する。

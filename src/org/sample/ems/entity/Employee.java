@@ -24,21 +24,6 @@ public class Employee implements Serializable {
     /** シリアルバージョンUID */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * コンストラクタ。
-     */
-    public Employee() {
-    }
-
-    /**
-     * コンストラクタ。
-     *
-     * @param employeeId 社員番号
-     */
-    public Employee(String employeeId) {
-        this.employeeId = employeeId;
-    }
-
     /** 社員番号 */
     @Id
     String employeeId;
@@ -64,6 +49,21 @@ public class Employee implements Serializable {
 
     /** メールアドレス */
     String email;
+
+    /**
+     * コンストラクタ。
+     */
+    public Employee() {
+    }
+
+    /**
+     * コンストラクタ。
+     *
+     * @param employeeId 社員番号
+     */
+    public Employee(String employeeId) {
+        this.employeeId = employeeId;
+    }
 
     /**
      * 社員番号を取得します。
@@ -164,7 +164,7 @@ public class Employee implements Serializable {
     public void setSex(String sex) {
         try {
             this.sex = Sex.valueOf(sex);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             this.sex = null;
         }
     }
@@ -231,7 +231,7 @@ public class Employee implements Serializable {
     public void setBranch(String branch) {
         try {
             this.branch = Branch.valueOf(branch);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             this.branch = null;
         }
     }
