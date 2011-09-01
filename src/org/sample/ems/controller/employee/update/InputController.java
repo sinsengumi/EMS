@@ -35,7 +35,7 @@ public class InputController extends HttpServlet {
 
         if (isValidInput(request)) {
             EmployeeDao dao = new EmployeeDaoImpl();
-            Employee employee = dao.getEmployee((String) request.getParameter("employeeId"));
+            Employee employee = dao.getEmployee(request.getParameter("employeeId"));
 
             if (employee != null) {
                 request.setAttribute("updateEmployee", employee);

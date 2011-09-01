@@ -1,5 +1,11 @@
 package org.sample.ems.entity;
 
+/**
+ * 社員情報の不正検索条件設定時に使用する例外クラスです。
+ *
+ * @author Tomoya Yoshida
+ * @version $Revision$
+ */
 public class IllegalSearchConditionException extends Exception {
 
     /** シリアルバージョンUID */

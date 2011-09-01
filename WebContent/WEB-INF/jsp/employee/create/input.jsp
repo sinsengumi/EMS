@@ -10,7 +10,7 @@
 <%@ taglib prefix="eFn" uri="/WEB-INF/emsFunctions.tld" %>
 
 <%
-    Map<String, String> sexMap = new LinkedHashMap<String, String>();
+Map<String, String> sexMap = new LinkedHashMap<String, String>();
 for (Sex sex : Sex.values()) {
     sexMap.put(sex.toString(), sex.getLabel());
 }
