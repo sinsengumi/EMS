@@ -25,8 +25,8 @@ public enum Messages {
     /** 「{0}」のフォーマットが不正です。 */
     MSG_INPUT_INVALID_FORMAT("「{0}」のフォーマットが不正です。"),
 
-    /** 「{0}」が「{1}」桁より長すぎます。 */
-    MSG_INPUT_GRATER_LENGTH("「{0}」が「{1}」桁より長すぎます。"),
+    /** 「{0}」が{1}桁より長すぎます。 */
+    MSG_INPUT_GRATER_LENGTH("「{0}」が{1}桁より長すぎます。"),
 
     /** 入力された「社員番号」は既に使用されています。 */
     MSG_INPUT_UNIQUE_CONSTRAINT_EMPLOYEE_ID("入力された「社員番号」は既に使用されています。"),
