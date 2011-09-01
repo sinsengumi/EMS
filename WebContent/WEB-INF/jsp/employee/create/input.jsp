@@ -29,15 +29,7 @@ pageContext.setAttribute("branchMap", branchMap, PageContext.PAGE_SCOPE);
 
 <h2>社員情報登録 入力</h2>
 
-<c:if test="${requestScope.errorMessages != null}">
-<div class="error-message">
-<ul>
-    <c:forEach var="errorMessage" items="${requestScope.errorMessages}" varStatus="status">
-    <li>${fn:escapeXml(errorMessage)}</li>
-    </c:forEach>
-</ul>
-</div>
-</c:if>
+<jsp:include page="/WEB-INF/jsp/include/errorMessages.jsp" />
 
 <p class="mB5">※は必須項目です。</p>
 <form action="confirm.action" method="post">

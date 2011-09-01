@@ -29,15 +29,7 @@
 
 <div id="login">
 
-<c:if test="${requestScope.errorMessages != null}">
-<div class="error-message">
-<ul>
-    <c:forEach var="errorMessage" items="${requestScope.errorMessages}" varStatus="status">
-    <li>${fn:escapeXml(errorMessage)}</li>
-    </c:forEach>
-</ul>
-</div>
-</c:if>
+<jsp:include page="/WEB-INF/jsp/include/errorMessages.jsp" />
 
 <form action="login.action" method="post">
 <table cellspacing="0" class="login-table mB5">
