@@ -1,4 +1,4 @@
-package org.sample.ems.exception;
+package org.sample.ems.share;
 
 /**
  * アプリケーションで使用する共通例外クラスです。

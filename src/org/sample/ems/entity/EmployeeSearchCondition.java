@@ -6,8 +6,7 @@ import java.util.Date;
 
 
 /**
- * 社員情報の検索条件を表すクラスです。<br>
- * 検索条件として用いるため、すべての条件をStringとして保持する。
+ * 社員情報の検索条件を表すクラスです。
  *
  * @author Tomoya Yoshida
  * @version $Revision$

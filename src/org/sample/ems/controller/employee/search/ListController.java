@@ -15,7 +15,7 @@ import org.sample.ems.dao.EmployeeDaoImpl;
 import org.sample.ems.entity.Employee;
 import org.sample.ems.entity.EmployeeSearchCondition;
 import org.sample.ems.entity.IllegalSearchConditionException;
-import org.sample.ems.helper.ServletHelper;
+import org.sample.ems.share.ServletHelper;
 
 /**
  * 「社員情報検索 一覧（検索）」のコントローラクラスです。

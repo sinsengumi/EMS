@@ -1,4 +1,4 @@
-<%@ page import="org.sample.ems.exception.EMSException" %>
+<%@ page import="org.sample.ems.share.EMSException" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isErrorPage="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>

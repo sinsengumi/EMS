@@ -7,7 +7,7 @@
     <display-name>EMS</display-name>
 
     <error-page>
-        <exception-type>org.sample.ems.exception.EMSException</exception-type>
+        <exception-type>org.sample.ems.share.EMSException</exception-type>
         <location>/WEB-INF/jsp/error/error.jsp</location>
     </error-page>
     <error-page>

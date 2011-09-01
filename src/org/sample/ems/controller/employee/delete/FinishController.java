@@ -14,8 +14,8 @@ import org.sample.ems.dao.EmployeeDao;
 import org.sample.ems.dao.EmployeeDaoImpl;
 import org.sample.ems.entity.Employee;
 import org.sample.ems.entity.EmployeeValidator;
-import org.sample.ems.helper.ServletHelper;
 import org.sample.ems.share.Messages;
+import org.sample.ems.share.ServletHelper;
 
 /**
  * 「社員情報削除 完了」のコントローラクラスです。

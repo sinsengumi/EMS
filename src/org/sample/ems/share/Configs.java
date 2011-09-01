@@ -7,8 +7,6 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import org.sample.ems.exception.EMSException;
-
 /**
  * 設定値を表すクラス（シングルトン）です。
  *

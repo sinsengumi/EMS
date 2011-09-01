@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.sample.ems.helper.ServletHelper;
+import org.sample.ems.share.ServletHelper;
 
 /**
  * 「社員情報登録 入力」のコントローラクラスです。

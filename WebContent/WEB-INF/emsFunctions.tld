@@ -6,7 +6,7 @@
 
     <function>
         <name>htmlRadios</name>
-        <function-class>org.sample.ems.jsp.EMSFunctions</function-class>
+        <function-class>org.sample.ems.share.EMSFunctions</function-class>
         <function-signature>
             java.lang.String htmlRadios(java.lang.String, java.util.Map, java.lang.String, java.lang.String)
         </function-signature>
@@ -14,7 +14,7 @@
 
     <function>
         <name>htmlOptions</name>
-        <function-class>org.sample.ems.jsp.EMSFunctions</function-class>
+        <function-class>org.sample.ems.share.EMSFunctions</function-class>
         <function-signature>
             java.lang.String htmlOptions(java.lang.String, java.util.Map, java.lang.String)
         </function-signature>
