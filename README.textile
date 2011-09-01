@@ -6,22 +6,22 @@ h1. EMS [Employee Management System]
 h2. 動作環境
 
 * JDK 1.6 以上
-* Servlet 3.0 を実装するアプリケーションサーバ（Tomcat であれば 7.0 以上）
-* PostgreSQL（DBを変更する場合は /src/META-INF/services/java.sql.Driver に記述されているJDBCドライバクラスを変更する）
+* Servlet 3.0 を実装するアプリケーションサーバ （Tomcat であれば 7.0 以上）
+* PostgreSQL （DBを変更する場合は /src/META-INF/services/java.sql.Driver に記述されているJDBCドライバクラスを変更する）
 
 h2. 開発環境構築
 
 # ソースディレクトリをインポートする
-Eclipseのプロジェクトファイルも含んでいるため、そのままインポートするだけでよい
+Eclipse のプロジェクトファイルも含んでいるため、そのままインポートするだけでよい
 # DBの設定
 設定ファイル ： /src/application.properties
 テーブル作成 ： /create_table.sql
 # アプリケーションサーバの設定
-WTPであれば、サーバを追加し、そこにプロジェクトを追加するだけでよい
+WTP であれば、サーバを追加し、そこにプロジェクトを追加するだけでよい
 
 h2. デプロイ
 
 # 「ant war」でwarファイルを作成
 # warファイルをアプリケーションサーバに配置（配置場所はアプリケーションサーバに依存する）
 
-+アプリケーションサーバにTomcatを使用する場合は、server.xmlのConnector要素に「useBodyEncodingForURI=true」を付与する。+
++アプリケーションサーバに Tomcat を使用する場合は、server.xml の Connector 要素に「useBodyEncodingForURI="true"」を付与する。+
