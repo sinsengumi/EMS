@@ -172,7 +172,7 @@ public class EmployeeSearchCondition {
         dateFormat.setLenient(false);
 
         try {
-            this.fromEnterDate = dateFormat.parse(toEnterDate);
+            this.toEnterDate = dateFormat.parse(toEnterDate);
         } catch (ParseException e) {
             throw new IllegalSearchConditionException(e);
         }
