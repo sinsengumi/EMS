@@ -42,8 +42,8 @@ public enum Messages {
      *
      * @param mesasge メッセージ
      */
-    private Messages(String mesasge) {
-        this.message = mesasge;
+    private Messages(String message) {
+        this.message = message;
     }
 
     /**
