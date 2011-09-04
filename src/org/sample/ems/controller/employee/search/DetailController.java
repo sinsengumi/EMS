@@ -14,6 +14,7 @@ import org.sample.ems.dao.EmployeeDao;
 import org.sample.ems.dao.EmployeeDaoImpl;
 import org.sample.ems.entity.Employee;
 import org.sample.ems.entity.EmployeeValidator;
+import org.sample.ems.share.EMSException;
 import org.sample.ems.share.Messages;
 import org.sample.ems.share.ServletHelper;
 
@@ -52,7 +53,7 @@ public class DetailController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        throw new EMSException(Messages.MSG_INVALID_OPERATION.format());
     }
 
     /**

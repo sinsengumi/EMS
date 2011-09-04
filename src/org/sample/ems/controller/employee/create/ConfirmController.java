@@ -14,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.sample.ems.entity.Employee;
 import org.sample.ems.entity.EmployeeValidator;
+import org.sample.ems.share.EMSException;
 import org.sample.ems.share.Messages;
 import org.sample.ems.share.ServletHelper;
 
@@ -32,7 +33,7 @@ public class ConfirmController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request, response);
+        throw new EMSException(Messages.MSG_INVALID_OPERATION.format());
     }
 
     @Override

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.sample.ems.share.EMSException;
+import org.sample.ems.share.Messages;
 import org.sample.ems.share.ServletHelper;
 
 /**
@@ -31,6 +33,6 @@ public class MenuController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        throw new EMSException(Messages.MSG_INVALID_OPERATION.format());
     }
 }
