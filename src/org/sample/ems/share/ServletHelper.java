@@ -4,8 +4,8 @@ import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * サーブレット操作のヘルパークラスです。<br>
@@ -32,7 +32,7 @@ public final class ServletHelper {
      * @throws IOException 最終的なフォワード先となるリソースがこの例外をスローした場合
      * @see RequestDispatcher#forward(javax.servlet.ServletRequest, javax.servlet.ServletResponse)
      */
-    public static void forward(HttpServletRequest request, HttpServletResponse response,
+    public static void forward(ServletRequest request, ServletResponse response,
             String path) throws ServletException, IOException {
 
         RequestDispatcher dispatcher = request.getRequestDispatcher(path);
